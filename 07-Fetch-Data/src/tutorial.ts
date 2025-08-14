@@ -1,24 +1,34 @@
 //Fetch Data
 
+import { z } from 'zod'
+
 const url = 'http://www-course-api.com/react-tour-project';
 
-type Tour ={
-    id:String;
-    name:String;
-    info:String;
-    image:String;
-    price:String;
+const tourSchema = z.object({
+    id: String(),
+    name: String(),
+    info: String(),
+    image: String(),
+    price: String()
 
-}
+})
+
+type Tour = z.infer<typeof tourSchema>;
+
 async function fetchData(url: string):Promise<Tour[]>{
     try{
         const response = await fetch(url);
         if(!response.ok){
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.json();
-        console.log(data);
-        return data;
+        const rawData: Tour[] = await response.json();
+        const result = tourSchema.array().safeParse(rawData);
+        
+        if(!result.success){
+            throw new Error (`Invalid data: {result.error}`)
+        }
+
+        return result.data;
         
     } catch(error){
         const errorMsg = 

@@ -10,8 +10,8 @@ I’m documenting everything I learn, including practice exercises, real-world c
 -  **Tuples & Enums**
 - **Type Guards**
 - **Fetch Data**
-- **Classes and Tasks**
+- **Classes**
 - **Generics & Utility Types**
 - **Modules & Namespaces**
-- **Challenges and Coding Tasks** after each lessons
+- **Challenges and Coding Tasks after each lessons**
 -  **React With TypeScript**
