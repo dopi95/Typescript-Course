@@ -5,8 +5,13 @@ I’m documenting everything I learn, including practice exercises, real-world c
 
 ## 📚 What’s Included
 - **Video-based Learning**: Concepts explained step-by-step
-- **Type Annotations & Interfaces**
+- **Type Annotations,Alias & Interfaces**
 - **Functions, Arrays, and Objects in TypeScript**
+-  **Tuples & Enums**
+- **Type Guards**
+- **Fetch Data**
+- **Classes and Tasks**
 - **Generics & Utility Types**
 - **Modules & Namespaces**
-- **Challenges and Coding Tasks** after each lesso
+- **Challenges and Coding Tasks** after each lessons
+-  **React With TypeScript**
